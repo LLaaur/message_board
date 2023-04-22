@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+    each message in messages 
+      section.message-card 
+        h2= message.title
+        p.text= message.text
+        footer 
+          p.user message.user
+          p.date= message.date
+
+
+
