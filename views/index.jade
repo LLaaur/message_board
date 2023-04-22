@@ -3,13 +3,11 @@ extends layout
 block content
   h1= title
   p Welcome to #{title}
-    each message in messages 
-      section.message-card 
-        h2= message.title
-        p.text= message.text
-        footer 
-          p.user message.user
-          p.date= message.date
+  hr
+  - for (let i = 0; i < messages.length; i++) 
+      p User: #{messages[i].user}
+      p #{messages[i].text}
+      p Added: #{messages[i].date}
+      hr
 
-
-
+  <a href="/new"><button>Add new message</button></a>
