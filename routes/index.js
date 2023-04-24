@@ -6,22 +6,18 @@ const messages = [
   {
     text: "yo wasup",
     user: "laur",
-    date: new Date()
   },
   {
     text: "trop trop",
     user: "maharajah",
-    date: new Date()
   }
 
 ]
-
 
 router.post('/new', (req, res, next) => {
   messages.unshift({
     text: req.body.text,
     user: req.body.user,
-    added: new Date()
   })
   res.redirect('/') // go back to a previous page
 });

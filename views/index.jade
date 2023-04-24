@@ -6,8 +6,7 @@ block content
   hr
   - for (let i = 0; i < messages.length; i++) 
       p User: #{messages[i].user}
-      p #{messages[i].text}
-      p Added: #{messages[i].date}
+      p Message: #{messages[i].text}
       hr
 
   <a href="/new"><button>Add new message</button></a>
